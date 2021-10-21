@@ -18,8 +18,7 @@ public class MyHashMap<K, V> {
 		if (myMapNode == null) {
 			myMapNode = new MyMapNode<>(key, value);
 			this.myLinkList.append(myMapNode);
-		} 
-		else {
+		} else {
 			myMapNode.setValue(value);
 		}
 	}
