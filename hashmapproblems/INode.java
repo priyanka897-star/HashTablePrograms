@@ -1,12 +1,11 @@
 package hashmapproblems;
 
-	public interface INode<K> {
-		K getKey();
+public interface INode<K> {
+	K getKey();
 
-		void setKey(K key);
+	void setKey(K key);
 
-		INode<K> getNext();
+	INode<K> getNext();
 
-		void setNext(INode<K> next);
+	void setNext(INode<K> next);
 }
-
