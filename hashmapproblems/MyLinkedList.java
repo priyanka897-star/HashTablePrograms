@@ -1,5 +1,7 @@
 package hashmapproblems;
 
+//import linkedlistpracticeproblems.INode;
+
 public class MyLinkedList<K> {
 	public INode<K> head;
 	public INode tail;
@@ -18,6 +20,19 @@ public class MyLinkedList<K> {
 			currentNode = currentNode.getNext();
 		}
 		return null;
+	}
+	
+	public INode delete(K key) {
+		INode<K> currentNode = head;
+		INode<K> previous = null;
+		while (currentNode != null && currentNode.getNext() != null) {
+			previous = currentNode;
+			if (currentNode.getKey().equals(key)) {
+				previous.setNext(currentNode.getNext());
+			}
+			currentNode =currentNode.getNext();
+		}
+		return currentNode;
 	}
 	
 	public void append(INode<K> currentNode) {
